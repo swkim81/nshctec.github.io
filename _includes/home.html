@@ -11,7 +11,7 @@
         <!-- {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%} -->
         {%- assign date_format = "%Y/%m/%d" -%}
         <span class="post-date">{{ post.date | date: date_format }}</span>
-      	<a class="post-link" href="{{ post.url | relative_url }}">
+      	<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
     	    {{ post.title | escape }}
 		</a>
         {%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
